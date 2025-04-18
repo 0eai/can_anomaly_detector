@@ -69,7 +69,7 @@ def train_ml_models(normal_data_file, config):
     # --- Autoencoder (RNN_AE) Training ---
     if 'rnn_ae' in ml_config:
         # ... (AE training logic remains the same, using X_train_main, X_val) ...
-        print("\nTraining Autoencoder (RNN_AE)...")
+        print(f"\n--- Training Autoencoder (RNN_AE) model ---")
         ae_params = ml_config['rnn_ae']['params']
         n_features = X_train_all_scaled.shape[1]
         encoding_dim = ae_params.get('encoding_dim', max(1, n_features // 2))
